@@ -1,0 +1,6 @@
+@import 'variables';
+
+body {
+  overflow-x: hidden;
+  @import 'MediaQueries/main';
+}

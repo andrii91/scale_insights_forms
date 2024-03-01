@@ -1,19 +1,15 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-// var sass = require('gulp-sass');
+const gulp = require('gulp');
+const concat = require('gulp-concat');
  const sass = require('gulp-sass')(require('sass'));
 
-var autoprefixer = require('gulp-autoprefixer');
-var cleanCSS = require('gulp-clean-css');
-var rename = require('gulp-rename');
-var sourcemaps = require('gulp-sourcemaps');
-var server = require('gulp-server-livereload');
-var imagemin = require('gulp-imagemin');
-var cache = require('gulp-cache');
-var uglify = require('gulp-uglify');
-var webp = require('gulp-webp');
-var uncss = require('gulp-uncss');
-var webserver = require('gulp-webserver');
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
+const rename = require('gulp-rename');
+const sourcemaps = require('gulp-sourcemaps');
+const uglify = require('gulp-uglify');
+const webp = require('gulp-webp');
+const uncss = require('gulp-uncss');
+const webserver = require('gulp-webserver');
  
 gulp.task('serve', function() {
   gulp.src('dist')
@@ -47,20 +43,9 @@ gulp.task('js', async function() {
 });
 gulp.task('js_v', async function() {
     gulp.src([
-            'src/js/vendor/jquery-3.6.3.min.js',
-            'src/js/vendor/inputmask.js',
+            'src/js/vendor/jquery-3.4.1.min.js',
         ])
         .pipe(concat('vendor.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'));
-});
-
-gulp.task('js_full', async function() {
-    gulp.src([
-            'src/js/vendor/jquery-3.6.3.min.js',
-            'src/js/component.js'
-        ])
-        .pipe(concat('app.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
@@ -81,15 +66,6 @@ gulp.task('pages', async function(){
     return gulp.src('src/*.html')
         .pipe(gulp.dest('dist'))
 });
-
-gulp.task('uncss', async function () {
-    return gulp.src('dist/css/app.css')
-        .pipe(uncss({
-            html: ['dist/handf.html']
-        }))
-        .pipe(gulp.dest('dist/css/head/'));
-});
-
 
 
 gulp.task('default', async function() {

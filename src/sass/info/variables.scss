@@ -1,0 +1,33 @@
+html {
+  --auntefication-bg: linear-gradient(90deg, #E7DFFF 0%, #DAFDFF 100%);
+  --auntefication-back: #5B6283;
+  --main-text-color: #142F53;
+  --auntefication-form: #ffffff;
+
+  --auntefication-form-btn-color: #BFFFF7;
+  --auntefication-form-btn-bg-hover: #214C83;
+  --auntefication-form-btn-bg: #143054;
+
+  --auntefication-label: #ADB5BD;
+  --auntefication-input-border: #CED4DA;
+  --footer-link: #2876DE;
+  --navBg: rgba(244, 245, 249, 0.80);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --auntefication-bg: linear-gradient(90deg, #31344E 0.21%, #39535F 100%);
+    --auntefication-back: #ACBDD7;
+    --main-text-color: #ffffff;
+    --auntefication-form: #25293C;
+
+    --auntefication-form-btn-color: #143054;
+    --auntefication-form-btn-bg-hover: #5BE7FE;
+    --auntefication-form-btn-bg: #BFFFF7;
+
+    --auntefication-label: #ACBDD7;
+    --auntefication-input-border: #677487;
+    --footer-link: #5BE7FE;
+    --navBg: rgba(37, 41, 60, 0.80);
+  }
+}

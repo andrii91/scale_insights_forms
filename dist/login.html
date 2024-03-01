@@ -56,21 +56,37 @@
         Scale Insights
       </a>
 
-      <h1 class="auntefication-title">Select a page</h1>
+      <h1 class="auntefication-title">Log in </h1>
+      <h6 class="auntefication-subtitle"></h6>
 
-      <ul>
-        <li><a href="start.html">Start your free trial for 30 days</a></li>
-        <li><a href="login.html">Log in </a></li>
-      </ul>
+      <form action="#" method="post" class="auntefication-form">
+        <div class="auntefication-label-wrap">
+          <input id="name" type="text" name="name" required data-placeholder="User name" data-error="Enter correct User name">
+          <label for="name" class="auntefication-label">User name</label>
+        </div>
+       
+        <div class="auntefication-label-wrap">
+          <input id="password" type="password" name="password" required data-placeholder="Password" data-error="Enter password">
+          <label for="password" class="auntefication-label">Password</label>
+        </div>
 
+        <div class="auntefication-checkbox">
+          <input type="checkbox" id="check">
+          <label class="form-check-label auntefication-checkbox-label" for="check">Remember me?</label>
+        </div>
+        
+        <button class="auntefication-form-btn submit" type="submit">Log in</button>
+
+        <a class="auntefication-link" href="#">Forgot your password?</a>
+      </form>
     </div>
   </header>
 
   <footer class="auntefication-footer">
     <div class="auntefication-wrap">
       <div class="auntefication-footer-item">
-        Already have an account? 
-        <a class="auntefication-link" href="login.html">Log in</a>
+        Don’t have an account yet?
+        <a class="auntefication-link" href="start.html">Sign up now</a>
       </div>
     </div>
   </footer>
